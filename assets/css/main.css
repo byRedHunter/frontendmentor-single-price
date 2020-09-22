@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	--color-green: #2ab2af;
+	--color-green-aux: #1ba5a3;
+	--color-yellow: #a1bd26;
+	--color-light: #e5eff5;
+	--color-dark: #98a6bd;
+
+	--font-size: 16px;
+	--font-family: 'Karla', sans-serif;
+	--font-weight-400: 400;
+	--font-weight-700: 700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+	background-color: var(--color-dark);
+	color: var(--color-light);
+}
+
+ul {
+	list-style: none;
+}
+
+section {
+	padding: 20px;
+}
+
+h2 {
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+.main {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 60px 20px;
+}
+.main-container {
+	height: auto;
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	grid-template: repeat(3, auto) / 1fr;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.main__community {
+	background-color: var(--color-light);
+	color: var(--color-dark);
+}
+.main__community h1 {
+	font-size: 18px;
+	color: var(--color-green);
+}
+.main__community h3 {
+	margin: 20px 0;
+	color: var(--color-yellow);
+	font-size: 16px;
+}
+.main__community p {
+	font-size: 15px;
+	font-weight: lighter;
+	line-height: 28px;
+}
+
+.main__suscription {
+	background-color: var(--color-green-aux);
+}
+.main__suscription p {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+}
+.main__suscription p:nth-child(2) {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.main__suscription p span {
+	font-size: 26px;
+	font-weight: var(--font-weight-700);
+}
+.main__suscription--button {
+	display: block;
+	margin: 20px 0;
+	text-decoration: none;
+	color: var(--color-light);
+	background: var(--color-yellow);
+	border-radius: 5px;
+	padding: 10px 0;
+	text-align: center;
+	box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main__why {
+	background-color: var(--color-green);
+}
+ul li {
+	margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+	.main-container {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	section {
+		padding: 40px;
+	}
+
+	.main {
+		align-items: center;
+	}
+
+	.main-container {
+		grid-template: 220px 300px / 1fr 1fr;
+	}
+
+	.main__community {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}
